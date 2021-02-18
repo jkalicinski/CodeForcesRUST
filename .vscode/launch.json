@@ -5,6 +5,27 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "(Windows) Launch",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceRoot}/800/tram/target/debug/tram.exe",
+            "args": [],
+            "cwd": "${workspaceRoot}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Cargo launch",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--lib"
+                ]
+            },
+            "program": "${cargo:program}",
+            "args": []
+        },
+        {
             "type": "lldb",
             "request": "launch",
             "name": "Debug",
